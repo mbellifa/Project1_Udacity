@@ -183,8 +183,12 @@ def create_movie_tiles_content(movies):
 def open_movies_page(movies):
     # Create or overwrite the output file
     
-    # Amélie was breaking because the file was being written out as ANSI instead of UTF-8, solution below from this stackoverflow link:
-    # http://stackoverflow.com/questions/934160/write-to-utf-8-file-in-python
+    """
+    Amélie was breaking because the file was being written out as ANSI
+    instead of UTF-8, solution below from this stackoverflow link:
+    http://stackoverflow.com/questions/934160/write-to-utf-8-file-in-python
+    """
+
     output_file = codecs.open('fresh_tomatoes.html', 'w', 'utf-8')
 
     # Replace the movie tiles placeholder generated content
